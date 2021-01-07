@@ -11,6 +11,9 @@ const runner            = require('./test-runner');
 
 const app = express();
 
+require('./db-conn.js')
+// require('./models.js')
+
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.use(cors({origin: '*'})); //USED FOR FCC TESTING PURPOSES ONLY!
